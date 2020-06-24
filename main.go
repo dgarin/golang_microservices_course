@@ -56,5 +56,5 @@ func main() {
 	l.Println("Received terminate, graceful shutdown", sig)
 	tc, cancel := context.WithTimeout(context.Background(), time.Duration(30)*time.Second)
 	defer cancel()
-	s.Shutdown(tc)
+	s.Shutdown(tc) // shutdown server nicely
 }
