@@ -40,7 +40,6 @@ func main() {
 		ReadTimeout:  1 * time.Second,
 		WriteTimeout: 1 * time.Second,
 	}
-
 	go func() {
 		l.Println("Starting server on port 8080")
 		err := s.ListenAndServe()
@@ -48,7 +47,6 @@ func main() {
 			l.Fatal(err)
 		}
 	}()
-
 	sigChan := make(chan os.Signal, 1)
 	signal.Notify(sigChan, os.Interrupt)
 	signal.Notify(sigChan, os.Kill)
