@@ -40,7 +40,7 @@ func (p *Products) UpdateProducts(rw http.ResponseWriter, r *http.Request) {
 		http.Error(rw, "Unable to convert id", http.StatusBadRequest)
 		return
 	}
-	p.l.Println("Handle PUT Product ", id)
+	p.l.Println("Handle PUT Product: ", id)
 	prod := r.Context().Value(KeyProduct{}).(data.Product)
 	err = data.UpdateProduct(id, &prod)
 	if err == data.ErrProductNotFound {
