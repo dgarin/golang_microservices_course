@@ -14,7 +14,7 @@ var ErrProductNotFound = fmt.Errorf("Product not found")
 var productList = []*Product{
 	{
 		ID:          1,
-		Name:        "Latte",
+		Name:        "Tea",
 		Description: "Frothy milky coffee",
 		Price:       2.45,
 		SKU:         "abc323",
