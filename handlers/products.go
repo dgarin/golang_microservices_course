@@ -35,7 +35,7 @@ func (p *Products) AddProducts(rw http.ResponseWriter, r *http.Request) {
 
 func (p *Products) UpdateProducts(rw http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
-	id, err := strconv.Atoi(vars["id"])
+	id, err := strconv.Atoi(vars["id"]) //extract id
 	if err != nil {
 		http.Error(rw, "Unable to convert id", http.StatusBadRequest)
 		return
