@@ -58,7 +58,7 @@ type productResponseWrapper struct {
 type noContentResponseWrapper struct {
 }
 
-// swagger:parameters updateProduct createProduct
+// swagger:parameters listProduct createProduct
 type productParamsWrapper struct {
 	// Product data structure to Update or Create.
 	// Note: the id field is ignored by update and create operations
@@ -67,7 +67,7 @@ type productParamsWrapper struct {
 	Body data.Product
 }
 
-// swagger:parameters updateProduct
+// swagger:parameters listSingleProduct deleteProduct
 type productIDParamsWrapper struct {
 	// The id of the product for which the operation relates
 	// in: path
